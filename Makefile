@@ -8,5 +8,5 @@ install:
 	@npm install -D daisyui@latest
 build:
 	@npx tailwindcss -i view/css/app.css -o public/styles.css
-	@templ generate view
+	@~/go/bin/templ generate view
 	@ go build -o bin/dreamai main.go

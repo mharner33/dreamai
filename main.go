@@ -25,7 +25,7 @@ func main() {
 	router.Handle("/", http.FileServer(http.FS(FS)))
 	router.Get("/", handler.MakeHandler(handler.HandleHomeIndex))
 	port := os.Getenv("HTTP_LISTEN_ADDR")
-	slog.Info("Starting server on port:","port", port)	
+	slog.Info("Starting server on port:", "port", port)
 	log.Fatal(http.ListenAndServe(port, router))
 }
 
